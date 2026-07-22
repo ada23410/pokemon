@@ -1,0 +1,953 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Microsoft JhengHei", sans-serif;
+  color: #222;
+  background: #111;
+}
+
+/* 上方導覽列 */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  padding: 0 32px;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 4px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navbar a {
+  color: #222;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #e63946;
+}
+
+/* 每一個卷軸區塊 */
+.section {
+  min-height: 100vh;
+  padding: 100px 24px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.content {
+  max-width: 960px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* 首頁 */
+.hero {
+  background: url("assets/hero-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tag {
+  display: inline-block;
+  background: #ffcc00;
+  border: 3px solid #222;
+  padding: 8px 16px;
+  font-weight: bold;
+  box-shadow: 4px 4px 0 #222;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 88px);
+  line-height: 1.1;
+  margin: 24px 0;
+  font-style: italic;
+  font-weight: 900;
+  color: #ffde00;
+  -webkit-text-stroke: 3px #2455c7;
+  paint-order: stroke fill;
+  text-shadow:
+    3px 3px 0 #2455c7,
+    -3px -3px 0 #2455c7,
+    3px -3px 0 #2455c7,
+    -3px 3px 0 #2455c7,
+    0 8px 0 #1b3f9e,
+    0 12px 14px rgba(0, 0, 0, 0.35);
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  display: inline-block;
+  font-size: 22px;
+  line-height: 1.8;
+  color: #fff;
+  background: #2455c7;
+  border: 3px solid #1b3f9e;
+  padding: 10px 20px;
+  box-shadow: 4px 4px 0 #222;
+}
+
+.start-btn {
+  margin-top: 24px;
+  padding: 16px 32px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #ffcc00;
+  border: 4px solid #222;
+  box-shadow: 6px 6px 0 #222;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0 #222;
+}
+
+.player {
+  position: absolute;
+  bottom: 80px;
+  left: 12%;
+  font-size: 64px;
+  animation: walk 1s infinite alternate;
+}
+
+@keyframes walk {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
+
+/* 不同區塊背景 */
+.training-center {
+  background: url("assets/grass.png");
+  background-size: 160px 160px;
+  background-repeat: repeat;
+  background-position: top left;
+}
+
+.training-center .content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 760px;
+}
+
+.training-center .dialog-box,
+.training-center .mission-card,
+.gb-frame {
+  position: relative;
+  background-color: #fff;
+  background-image:
+    radial-gradient(circle at 12px 12px, #000 0 2.5px, transparent 3px),
+    radial-gradient(circle at calc(100% - 12px) 12px, #000 0 2.5px, transparent 3px),
+    radial-gradient(circle at 12px calc(100% - 12px), #000 0 2.5px, transparent 3px),
+    radial-gradient(circle at calc(100% - 12px) calc(100% - 12px), #000 0 2.5px, transparent 3px);
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 5px #000;
+  padding: 26px 32px;
+  margin: 0;
+  font-family: "Courier New", monospace;
+}
+
+.gb-frame {
+  margin-top: 32px;
+}
+
+.gb-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.training-center .speaker {
+  background: #000;
+  border-radius: 4px;
+}
+
+.training-center .mission-card h2 {
+  letter-spacing: 2px;
+}
+
+.training-center .mission-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 32px;
+  font-weight: bold;
+}
+
+.training-center .mission-card li:first-child::before {
+  content: "▶ ";
+}
+
+.team {
+  position: relative;
+  overflow: hidden;
+  background: url("assets/grass.png");
+  background-size: 160px 160px;
+  background-repeat: repeat;
+  background-position: top left;
+}
+
+.team .content {
+  position: relative;
+  z-index: 1;
+}
+
+.team-bush {
+  position: absolute;
+  z-index: 0;
+  height: auto;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.map {
+  background: url("assets/grass.png");
+  background-size: 160px 160px;
+  background-repeat: repeat;
+  background-position: top left;
+}
+
+.rocket {
+  background: linear-gradient(135deg, #202020, #7f1d1d);
+  color: white;
+}
+
+.boss,
+.grass,
+.song {
+  background: url("assets/grass.png");
+  background-size: 160px 160px;
+  background-repeat: repeat;
+  background-position: top left;
+}
+
+.ending {
+  background: linear-gradient(#fff6b8, #f9c74f);
+}
+
+/* 對話框 */
+.dialog-box,
+.mission-card,
+.battle-box {
+  background: white;
+  color: #222;
+  border: 5px solid #222;
+  box-shadow: 8px 8px 0 #222;
+  padding: 32px;
+  margin: 24px auto;
+  max-width: 720px;
+  text-align: left;
+}
+
+.dialog-box p,
+.mission-card p,
+.battle-box p {
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+.speaker {
+  display: inline-block;
+  background: #222;
+  color: white;
+  padding: 4px 12px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.mission-card h2,
+.battle-box h2,
+.section h2 {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.mission-card ul {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* 角色卡 */
+.section-desc {
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.role-card {
+  background: white;
+  border: 4px solid #222;
+  box-shadow: 6px 6px 0 #222;
+  padding: 28px 20px;
+}
+
+.avatar {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 50%;
+  border: 4px solid #222;
+  box-shadow: 4px 4px 0 #222;
+  background: #fff9df;
+  image-rendering: pixelated;
+}
+
+.role-card h3 {
+  font-size: 24px;
+  margin: 12px 0;
+}
+
+.role-card p {
+  font-size: 18px;
+}
+
+/* 關卡一：火箭部隊總部 */
+.rocket {
+  background: url("assets/grass.png");
+  background-size: 160px 160px;
+  background-repeat: repeat;
+  background-position: top left;
+  color: #222;
+}
+
+.rocket .content {
+  max-width: none;
+}
+
+.rocket-scene {
+  position: relative;
+  width: 100vw;
+  min-height: 860px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  image-rendering: pixelated;
+  background: url("assets/grass.png");
+  background-size: 160px 160px;
+  background-repeat: repeat;
+  background-position: top left;
+}
+
+.scene-prop {
+  position: absolute;
+  z-index: 1;
+  height: auto;
+  transform: translateX(-50%);
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.rocket-hq {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: min(480px, 60vw);
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(8px 10px 0 rgba(0, 0, 0, 0.25));
+}
+
+.rocket-dialog {
+  position: absolute;
+  top: 390px;
+  right: 7vw;
+  z-index: 4;
+  width: min(440px, 34vw);
+  margin: 0;
+}
+
+.rocket-dialog h2 {
+  font-size: 32px;
+}
+
+.rocket-dialog p {
+  font-size: 20px;
+}
+
+.rocket-dialog .badge {
+  margin-top: 14px;
+}
+
+/* 後續關卡：寶可夢紅版滿版場景 */
+.boss,
+.grass,
+.song {
+  color: #222;
+}
+
+.boss .content,
+.grass .content,
+.song .content {
+  max-width: none;
+}
+
+.stage-scene {
+  position: relative;
+  width: 100vw;
+  min-height: 860px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  image-rendering: pixelated;
+  background: url("assets/grass.png");
+  background-size: 160px 160px;
+  background-repeat: repeat;
+  background-position: top left;
+}
+
+.stage-dialog {
+  position: absolute;
+  top: 390px;
+  right: 7vw;
+  z-index: 5;
+  width: min(440px, 34vw);
+  margin: 0;
+}
+
+.stage-dialog h2 {
+  font-size: 32px;
+}
+
+.stage-dialog p {
+  font-size: 20px;
+}
+
+.stage-dialog .badge {
+  margin-top: 14px;
+}
+
+.stage-building {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: min(480px, 60vw);
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(8px 10px 0 rgba(0, 0, 0, 0.25));
+}
+
+.grass-dialog {
+  top: 430px;
+}
+
+.song-dialog {
+  top: 390px;
+}
+
+/* 冒險地圖：寶可夢小鎮地圖風格 */
+.map .content {
+  max-width: none;
+}
+
+.map-road {
+  position: relative;
+  width: 100vw;
+  aspect-ratio: 1672 / 941;
+  margin-top: 40px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  background: url("assets/grass-1.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.map-tree,
+.map-prop {
+  position: absolute;
+  z-index: 0;
+  height: auto;
+  transform: translateX(-50%);
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.map-house {
+  position: absolute;
+  z-index: 1;
+  transform: translateX(-50%);
+  width: 200px;
+  text-align: center;
+}
+
+.house-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-64px, 0);
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  background: #f8d247;
+  border: 3px solid #222;
+  box-shadow: inset -3px -3px 0 rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.house-sprite {
+  display: block;
+  width: 160px;
+  height: 140px;
+  margin: 0 auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.house-label {
+  position: relative;
+  z-index: 2;
+  margin: 12px auto 0;
+  display: inline-block;
+  padding: 8px 16px;
+  background: #fff9df;
+  border: 4px solid #222;
+  box-shadow: 5px 5px 0 #222;
+  font-weight: bold;
+  font-size: 18px;
+  color: #222;
+}
+
+.house-desc {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* 徽章 */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 14px 24px;
+  background: #ffcc00;
+  border: 4px solid #222;
+  box-shadow: 5px 5px 0 #222;
+  color: #222;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.badge-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.badge-clickable {
+  cursor: pointer;
+}
+
+.badge-clickable:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 #222;
+}
+
+.badge-wall {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.badge-icon-large {
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+/* 關卡紀錄與媒體展示 */
+.record-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 20px;
+  background: #f8d247;
+  border: 4px solid #222;
+  box-shadow: 5px 5px 0 #222;
+  color: #222;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.record-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 #222;
+}
+
+.ending-media-slot {
+  margin-top: 36px;
+}
+
+.media-frame,
+.modal-media-slot {
+  min-height: 260px;
+  border: 5px dashed #455856;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 6px 6px 0 #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: #455856;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stage-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.stage-modal.show {
+  display: flex;
+}
+
+.modal-panel {
+  width: min(920px, 94vw);
+  max-height: 88vh;
+  overflow: auto;
+  background: #fff9df;
+  border: 6px solid #222;
+  box-shadow: 10px 10px 0 #111;
+  padding: 28px;
+  color: #222;
+  text-align: left;
+}
+
+.modal-panel h3 {
+  margin: 0 0 18px;
+  font-size: 32px;
+}
+
+.modal-stage-name {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 4px 12px;
+  background: #222;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.modal-hero-img {
+  display: block;
+  width: 100%;
+  max-width: 315px;
+  margin: 0 auto 18px;
+}
+
+.modal-lecturer {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal-desc {
+  margin: 0 0 22px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.modal-ability {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  background: #ffcc00;
+  border: 4px solid #222;
+  box-shadow: 5px 5px 0 #222;
+  font-weight: bold;
+}
+
+.modal-ability-label {
+  font-size: 16px;
+}
+
+.modal-ability-value {
+  font-size: 22px;
+}
+
+.modal-panel textarea {
+  width: 100%;
+  min-height: 160px;
+  resize: vertical;
+  margin-bottom: 22px;
+  padding: 16px;
+  border: 4px solid #222;
+  background: #fff;
+  color: #222;
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: inherit;
+}
+
+.modal-field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.modal-panel-wide {
+  width: min(760px, 94vw);
+}
+
+.diary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.diary-entry {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 24px;
+  border-bottom: 3px dashed #222;
+}
+
+.diary-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.diary-entry:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.diary-photo {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 4px solid #222;
+  box-shadow: 5px 5px 0 #222;
+}
+
+.diary-entry:nth-child(odd) .diary-photo {
+  transform: rotate(15deg);
+}
+
+.diary-entry:nth-child(even) .diary-photo {
+  transform: rotate(-15deg);
+}
+
+.diary-entry-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.diary-text {
+  min-height: 110px;
+  margin: 0;
+  padding: 16px;
+  border: 4px solid #222;
+  background: #fff;
+  color: #222;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .diary-entry,
+  .diary-entry:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .diary-photo {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+.modal-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 22px;
+  padding: 14px 16px;
+  border: 4px solid #222;
+  background: #fff;
+  color: #222;
+  font-size: 18px;
+  font-family: inherit;
+}
+
+.modal-close {
+  float: right;
+  padding: 8px 14px;
+  background: #d03430;
+  border: 4px solid #222;
+  box-shadow: 4px 4px 0 #222;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 捲動出現動畫 */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 手機版 */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar nav {
+    display: none;
+  }
+
+  .card-grid,
+  .badge-wall {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .map-house {
+    width: 130px;
+  }
+
+  .house-label {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .house-desc {
+    font-size: 12px;
+  }
+
+  .dialog-box,
+  .mission-card,
+  .battle-box {
+    padding: 24px;
+  }
+
+  .dialog-box p,
+  .mission-card p,
+  .battle-box p {
+    font-size: 18px;
+  }
+
+  .section h2,
+  .mission-card h2,
+  .battle-box h2 {
+    font-size: 32px;
+  }
+}
+/* 回到頂部按鈕 */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.8);
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1);
+}
+
+.back-to-top img {
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+  filter: drop-shadow(3px 4px 0 rgba(0, 0, 0, 0.35));
+}
+
+.back-to-top span {
+  background: #222;
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 2px 10px;
+  border-radius: 4px;
+}
+
+.back-to-top:hover img {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 640px) {
+  .back-to-top img {
+    width: 48px;
+    height: 48px;
+  }
+}

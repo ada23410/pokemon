@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>淡水訓練中心冒險之旅</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 固定在上方的導覽列 -->
+  <header class="navbar">
+    <div class="logo">淡水冒險之旅</div>
+    <nav>
+      <a href="#start">開始</a>
+      <a href="#mission">任務</a>
+      <a href="#team">夥伴</a>
+      <a href="#stages">關卡</a>
+      <a href="#ending">結局</a>
+    </nav>
+  </header>
+
+  <!-- 第一區：首頁 -->
+  <section id="start" class="section hero">
+    <div class="pixel-ground"></div>
+
+    <div class="content fade-in">
+      <p class="tag">四天三夜訓練任務</p>
+      <h1>淡水訓練中心<br />冒險之旅</h1>
+      <p class="subtitle">
+        你即將成為一名訓練員，與夥伴一起挑戰任務、蒐集徽章。
+      </p>
+      <button class="start-btn" onclick="scrollToSection('mission')">
+        開始冒險
+      </button>
+    </div>
+
+    <div class="player">🧢</div>
+  </section>
+
+  <!-- 第二區：抵達訓練中心 -->
+  <section id="mission" class="section training-center">
+    <div class="content reveal">
+      <div class="dialog-box">
+        <p class="speaker">NPC</p>
+        <p>
+          歡迎來到淡水教育訓練中心！<br />
+          接下來四天三夜，你將和隊友一起完成冒險任務。
+        </p>
+      </div>
+
+      <div class="mission-card">
+        <h2>主線任務</h2>
+        <p>完成所有關卡，蒐集四枚訓練徽章。</p>
+        <ul>
+          <li>敏捷徽章</li>
+          <li>當責徽章</li>
+          <li>合作徽章</li>
+          <li>冒險徽章</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第三區：冒險夥伴 -->
+  <section id="team" class="section team">
+    <img class="team-bush" src="assets/tileset/bush-large.png" alt="" aria-hidden="true" style="top: 8%; left: 6%; width: 70px;" />
+    <img class="team-bush" src="assets/tileset/bush-large.png" alt="" aria-hidden="true" style="top: 22%; left: 88%; width: 90px;" />
+    <img class="team-bush" src="assets/tileset/bush-large.png" alt="" aria-hidden="true" style="top: 68%; left: 4%; width: 60px;" />
+    <img class="team-bush" src="assets/tileset/bush-large.png" alt="" aria-hidden="true" style="top: 80%; left: 92%; width: 80px;" />
+    <img class="team-bush" src="assets/tileset/bush-large.png" alt="" aria-hidden="true" style="top: 5%; left: 45%; width: 55px;" />
+    <img class="team-bush" src="assets/tileset/bush-large.png" alt="" aria-hidden="true" style="top: 85%; left: 40%; width: 65px;" />
+
+    <div class="content reveal">
+      <h2>冒險夥伴集合</h2>
+      <p class="section-desc">
+        每位成員都會在隊伍中扮演不同角色，協助完成任務。
+      </p>
+
+      <div class="card-grid">
+        <div class="role-card">
+          <img class="avatar" src="assets/member-leader.png" alt="隊長角色圖" />
+          <h3>隊長</h3>
+          <p>負責決策與分工</p>
+        </div>
+
+        <div class="role-card">
+          <img class="avatar" src="assets/member-scout.png" alt="情報員角色圖" />
+          <h3>情報員</h3>
+          <p>負責觀察與蒐集線索</p>
+        </div>
+
+        <div class="role-card">
+          <img class="avatar" src="assets/member-recorder.png" alt="紀錄員角色圖" />
+          <h3>紀錄員</h3>
+          <p>負責整理任務成果</p>
+        </div>
+
+        <div class="role-card">
+          <img class="avatar" src="assets/member-photographer.png" alt="攝影師角色圖" />
+          <h3>攝影師</h3>
+          <p>負責拍攝旅程精彩瞬間</p>
+        </div>
+
+        <div class="role-card">
+          <img class="avatar" src="assets/member-explorer.png" alt="探索員角色圖" />
+          <h3>探索員</h3>
+          <p>負責帶隊探索未知場地</p>
+        </div>
+
+        <div class="role-card">
+          <img class="avatar" src="assets/member-timekeeper.png" alt="時間管理員角色圖" />
+          <h3>時間管理員</h3>
+          <p>負責掌握任務時間</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- 第四區：關卡總覽 -->
+  <section id="stages" class="section map">
+    <div class="content reveal">
+      <h2>冒險地圖</h2>
+      <p class="section-desc">
+        每個關卡都代表一項訓練能力，完成後即可獲得徽章。
+      </p>
+
+      <div class="map-road">
+        <!-- 上緣樹列 -->
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 4%; top: 3%; width: 55px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 15.5%; top: 3%; width: 50px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 27%; top: 3%; width: 55px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 38.5%; top: 3%; width: 50px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 50%; top: 3%; width: 55px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 61.5%; top: 3%; width: 50px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 73%; top: 3%; width: 55px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 84.5%; top: 3%; width: 50px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 96%; top: 3%; width: 55px;" />
+
+        <!-- 下緣樹列 -->
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 4%; top: 96%; width: 55px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 15.5%; top: 96%; width: 50px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 27%; top: 96%; width: 55px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 38.5%; top: 96%; width: 50px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 61.5%; top: 96%; width: 50px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 73%; top: 96%; width: 55px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 84.5%; top: 96%; width: 50px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 96%; top: 96%; width: 55px;" />
+
+        <!-- 左緣樹列 -->
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 3%; top: 18%; width: 50px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 3%; top: 33%; width: 55px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 3%; top: 48%; width: 50px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 3%; top: 63%; width: 55px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 3%; top: 78%; width: 50px;" />
+
+        <!-- 右緣樹列 -->
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 97%; top: 18%; width: 50px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 97%; top: 33%; width: 55px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 97%; top: 48%; width: 50px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 97%; top: 63%; width: 55px;" />
+        <img class="map-tree" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 97%; top: 78%; width: 50px;" />
+
+        <!-- 空地小裝飾：填滿草皮 -->
+        <img class="map-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 16%; top: 10%; width: 35px;" />
+        <img class="map-prop" src="assets/tileset/rock-small.png" alt="" aria-hidden="true" style="left: 20%; top: 22%; width: 30px;" />
+        <img class="map-prop" src="assets/tileset/tree-small-01.png" alt="" aria-hidden="true" style="left: 14%; top: 33%; width: 40px;" />
+        <img class="map-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 82%; top: 10%; width: 35px;" />
+        <img class="map-prop" src="assets/tileset/rock-large.png" alt="" aria-hidden="true" style="left: 78%; top: 24%; width: 35px;" />
+        <img class="map-prop" src="assets/tileset/tree-small-02.png" alt="" aria-hidden="true" style="left: 85%; top: 34%; width: 40px;" />
+        <img class="map-prop" src="assets/tileset/tree-small-03.png" alt="" aria-hidden="true" style="left: 18%; top: 64%; width: 38px;" />
+        <img class="map-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 14%; top: 78%; width: 32px;" />
+        <img class="map-prop" src="assets/tileset/rock-small.png" alt="" aria-hidden="true" style="left: 22%; top: 90%; width: 28px;" />
+        <img class="map-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 80%; top: 64%; width: 34px;" />
+        <img class="map-prop" src="assets/tileset/tree-small-04.png" alt="" aria-hidden="true" style="left: 85%; top: 80%; width: 38px;" />
+        <img class="map-prop" src="assets/tileset/rock-large.png" alt="" aria-hidden="true" style="left: 78%; top: 90%; width: 30px;" />
+        <img class="map-prop" src="assets/tileset/rock-small.png" alt="" aria-hidden="true" style="left: 45%; top: 52%; width: 28px;" />
+        <img class="map-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 56%; top: 52%; width: 30px;" />
+
+        <div class="map-house house-rocket" style="left: 31%; top: 13%; cursor: pointer;" onclick="scrollToSection('stage-rocket')">
+          <div class="house-badge">1</div>
+          <img class="house-sprite" src="assets/house-rocket.png" alt="火箭部隊突襲關卡房屋" />
+          <div class="house-label">敏捷創新與執行力</div>
+          <p class="house-desc">限時挑戰，訓練敏捷力。</p>
+        </div>
+
+        <div class="map-house house-gym" style="left: 68%; top: 13%; cursor: pointer;" onclick="scrollToSection('stage-boss')">
+          <div class="house-badge">2</div>
+          <img class="house-sprite" src="assets/house-gym.png" alt="板木老大挑戰關卡房屋" />
+          <div class="house-label">贏在當責110%執行力</div>
+          <p class="house-desc">情境決策，訓練當責力。</p>
+        </div>
+
+        <div class="map-house house-grass" style="left: 31%; top: 68%; cursor: pointer;" onclick="scrollToSection('stage-grass')">
+          <div class="house-badge">3</div>
+          <img class="house-sprite" src="assets/house-grass.png" alt="草叢冒險關卡房屋" />
+          <div class="house-label">樹下的故事＋職系交流</div>
+          <p class="house-desc">探索場地，尋找線索。</p>
+        </div>
+
+        <div class="map-house house-song" style="left: 68%; top: 68%; cursor: pointer;" onclick="scrollToSection('stage-song')">
+          <div class="house-badge">4</div>
+          <img class="house-sprite" src="assets/house-song.png" alt="胖丁的歌聲關卡房屋" />
+          <div class="house-label">國泰歌與站上頂端</div>
+          <p class="house-desc">回顧旅程，完成分享。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+
+  <!-- 第五區：關卡一 -->
+  <section id="stage-rocket" class="section stage rocket">
+    <div class="content reveal">
+      <div class="rocket-scene">
+        <img class="scene-prop" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 6%; top: 160px; width: 170px;" />
+        <img class="scene-prop" src="assets/tileset/tree-big-02.png" alt="" aria-hidden="true" style="left: 14%; top: 460px; width: 150px;" />
+        <img class="scene-prop" src="assets/tileset/tree-big-03.png" alt="" aria-hidden="true" style="left: 91%; top: 140px; width: 160px;" />
+        <img class="scene-prop" src="assets/tileset/tree-small-01.png" alt="" aria-hidden="true" style="left: 83%; top: 560px; width: 110px;" />
+        <img class="scene-prop" src="assets/tileset/bush-large.png" alt="" aria-hidden="true" style="left: 8%; top: 630px; width: 100px;" />
+        <img class="scene-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 23%; top: 690px; width: 70px;" />
+        <img class="scene-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 89%; top: 690px; width: 75px;" />
+        <img class="scene-prop" src="assets/tileset/rock-large.png" alt="" aria-hidden="true" style="left: 18%; top: 590px; width: 80px;" />
+        <img class="scene-prop" src="assets/tileset/rock-small.png" alt="" aria-hidden="true" style="left: 31%; top: 670px; width: 60px;" />
+        <img class="scene-prop" src="assets/tileset/rock-small.png" alt="" aria-hidden="true" style="left: 5%; top: 380px; width: 55px;" />
+
+        <img class="rocket-hq" src="assets/house-rocket.png" alt="火箭部隊突襲房屋" />
+
+        <div class="rocket-dialog battle-box">
+          <p class="speaker">關卡一</p>
+          <h2>火箭部隊－敏捷關卡說明</h2>
+          <p>
+            火箭部隊突然來襲，面對瞬息萬變的挑戰，必須快速觀察、即時應變，才能成功突破敵人的包圍。
+          </p>
+          <div class="badge badge-clickable" data-modal-target="badge-agility-modal">
+            敏捷徽章
+          </div>
+          <button class="record-btn" data-modal-target="rocket-modal">開啟紀錄</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第六區：關卡二 -->
+  <section id="stage-boss" class="section stage boss">
+    <div class="content reveal">
+      <div class="boss-scene stage-scene">
+        <img class="scene-prop" src="assets/tileset/tree-big-02.png" alt="" aria-hidden="true" style="left: 7%; top: 170px; width: 175px;" />
+        <img class="scene-prop" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 15%; top: 470px; width: 150px;" />
+        <img class="scene-prop" src="assets/tileset/tree-big-03.png" alt="" aria-hidden="true" style="left: 90%; top: 130px; width: 165px;" />
+        <img class="scene-prop" src="assets/tileset/tree-small-02.png" alt="" aria-hidden="true" style="left: 84%; top: 570px; width: 105px;" />
+        <img class="scene-prop" src="assets/tileset/bush-large.png" alt="" aria-hidden="true" style="left: 9%; top: 640px; width: 95px;" />
+        <img class="scene-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 24%; top: 695px; width: 70px;" />
+        <img class="scene-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 88%; top: 695px; width: 75px;" />
+        <img class="scene-prop" src="assets/tileset/rock-large.png" alt="" aria-hidden="true" style="left: 19%; top: 600px; width: 80px;" />
+        <img class="scene-prop" src="assets/tileset/rock-small.png" alt="" aria-hidden="true" style="left: 32%; top: 675px; width: 58px;" />
+        <img class="scene-prop" src="assets/tileset/rock-small.png" alt="" aria-hidden="true" style="left: 4%; top: 390px; width: 55px;" />
+
+        <img class="stage-building" src="assets/house-gym.png" alt="板木道館" />
+
+        <div class="stage-dialog boss-dialog battle-box">
+          <p class="speaker">關卡二</p>
+          <h2>板木老大－當責關卡說明</h2>
+          <p>站在板木老大面前，每一個決定都影響最後的結果。勇於承擔責任、面對挑戰，並為自己的選擇負責，才能突破最終考驗。</p>
+          <div class="badge badge-clickable" data-modal-target="badge-accountability-modal">當責徽章</div>
+          <button class="record-btn" data-modal-target="boss-modal">開啟紀錄</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第七區：關卡三 -->
+  <section id="stage-grass" class="section stage grass">
+    <div class="content reveal">
+      <div class="grass-scene stage-scene">
+        <img class="scene-prop" src="assets/tileset/tree-big-03.png" alt="" aria-hidden="true" style="left: 6%; top: 150px; width: 172px;" />
+        <img class="scene-prop" src="assets/tileset/tree-big-02.png" alt="" aria-hidden="true" style="left: 13%; top: 450px; width: 148px;" />
+        <img class="scene-prop" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 92%; top: 160px; width: 160px;" />
+        <img class="scene-prop" src="assets/tileset/tree-small-03.png" alt="" aria-hidden="true" style="left: 85%; top: 565px; width: 108px;" />
+        <img class="scene-prop" src="assets/tileset/bush-large.png" alt="" aria-hidden="true" style="left: 10%; top: 625px; width: 98px;" />
+        <img class="scene-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 25%; top: 690px; width: 68px;" />
+        <img class="scene-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 87%; top: 690px; width: 72px;" />
+        <img class="scene-prop" src="assets/tileset/rock-large.png" alt="" aria-hidden="true" style="left: 20%; top: 595px; width: 78px;" />
+        <img class="scene-prop" src="assets/tileset/rock-small.png" alt="" aria-hidden="true" style="left: 33%; top: 670px; width: 56px;" />
+        <img class="scene-prop" src="assets/tileset/rock-small.png" alt="" aria-hidden="true" style="left: 6%; top: 370px; width: 52px;" />
+
+        <img class="stage-building" src="assets/house-grass.png" alt="草叢冒險小屋" />
+
+        <div class="stage-dialog grass-dialog dialog-box">
+          <p class="speaker">關卡三</p>
+          <h2>草叢冒險－大樹下的故事</h2>
+          <p>在茂密的草叢中，有一棵充滿溫暖的大樹。大家聚集在樹下分享旅程中的收穫、交流經驗，也彼此關心與鼓勵。</p>
+          <div class="badge badge-clickable" data-modal-target="badge-teamwork-modal">合作徽章</div>
+          <button class="record-btn" data-modal-target="grass-modal">開啟紀錄</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第八區：關卡四 -->
+  <section id="stage-song" class="section stage song">
+    <div class="content reveal">
+      <div class="song-scene stage-scene">
+        <img class="scene-prop" src="assets/tileset/tree-big-01.png" alt="" aria-hidden="true" style="left: 5%; top: 165px; width: 168px;" />
+        <img class="scene-prop" src="assets/tileset/tree-big-03.png" alt="" aria-hidden="true" style="left: 16%; top: 465px; width: 152px;" />
+        <img class="scene-prop" src="assets/tileset/tree-big-02.png" alt="" aria-hidden="true" style="left: 89%; top: 145px; width: 158px;" />
+        <img class="scene-prop" src="assets/tileset/tree-small-04.png" alt="" aria-hidden="true" style="left: 83%; top: 575px; width: 112px;" />
+        <img class="scene-prop" src="assets/tileset/bush-large.png" alt="" aria-hidden="true" style="left: 7%; top: 635px; width: 96px;" />
+        <img class="scene-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 22%; top: 698px; width: 70px;" />
+        <img class="scene-prop" src="assets/tileset/bush-small.png" alt="" aria-hidden="true" style="left: 90%; top: 698px; width: 74px;" />
+        <img class="scene-prop" src="assets/tileset/rock-large.png" alt="" aria-hidden="true" style="left: 17%; top: 598px; width: 80px;" />
+        <img class="scene-prop" src="assets/tileset/rock-small.png" alt="" aria-hidden="true" style="left: 30%; top: 672px; width: 58px;" />
+        <img class="scene-prop" src="assets/tileset/rock-small.png" alt="" aria-hidden="true" style="left: 3%; top: 395px; width: 54px;" />
+
+        <img class="stage-building" src="assets/house-song.png" alt="胖丁歌聲小屋" />
+
+        <div class="stage-dialog song-dialog dialog-box">
+          <p class="speaker">關卡四</p>
+          <h2>遇見胖丁－唱歌跳舞</h2>
+          <p>旅程的最後，遇見了喜歡唱歌跳舞的胖丁。一起用歡樂與笑容為這段冒險畫下完美句點。</p>
+          <div class="badge badge-clickable" data-modal-target="badge-adventure-modal">冒險徽章</div>
+          <button class="record-btn" data-modal-target="song-modal">開啟紀錄</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最後區：結局 -->
+  <section id="ending" class="section ending">
+    <div class="content reveal">
+      <h2>恭喜完成冒險！</h2>
+      <p>
+        你和隊友已經完成四天三夜的訓練任務，<br />
+        成功蒐集所有徽章。
+      </p>
+
+      <div class="badge-wall">
+        <img class="badge-icon-large" src="assets/class01/Goal1.png" alt="敏捷徽章" />
+        <img class="badge-icon-large" src="assets/class02/Gold2.png" alt="當責徽章" />
+        <img class="badge-icon-large" src="assets/Cathay.png" alt="合作徽章" />
+        <img class="badge-icon-large" src="assets/class04/Gold8.png" alt="冒險徽章" />
+      </div>
+
+      <div class="gb-frame">
+        <img src="assets/congreat.png" alt="全體隊員合照" />
+      </div>
+
+    </div>
+  </section>
+
+  <div class="stage-modal" id="badge-agility-modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" data-modal-close="badge-agility-modal">關閉</button>
+      <p class="modal-stage-name">關卡一｜敏捷創新與執行力</p>
+      <h3>敏捷勳章：快速試錯，持續優化</h3>
+      <img class="modal-hero-img" src="assets/class01/Goal1.png" alt="火箭部隊" />
+      <p class="modal-lecturer">講師：王大瑋</p>
+      <p class="modal-desc">
+        ArtecRobo 程式機器人組裝機器人的過程中，每一次失敗都是下一次成功的重要經驗。透過團隊分工、互相討論與不斷修正，敏捷，並非追求一次做到最好，而是在有限時間內快速學習、快速改善，讓團隊一起朝共同目標前進。
+      </p>
+      <div class="modal-ability">
+        <span class="modal-ability-label">通過關卡獲得能力值</span>
+        <span class="modal-ability-value">敏捷力 +10</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stage-modal" id="badge-accountability-modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" data-modal-close="badge-accountability-modal">關閉</button>
+      <p class="modal-stage-name">關卡二｜贏在當責110%執行力</p>
+      <h3>當責勳章：確認核心標準、積極溝通、有效協作</h3>
+      <img class="modal-hero-img" src="assets/class02/Gold2.png" alt="板木老大" />
+      <p class="modal-desc">
+        透過多項互動遊戲，理解當責與執行力的重要性。蜥蜴拼圖確認核心標準的重要，21點遊戲除了自己外主動協助團隊成員；修理老舊收銀機遊戲更需要積極溝通、有效協作，提升團隊整體效率。
+      </p>
+      <div class="modal-ability">
+        <span class="modal-ability-label">通過關卡獲得能力值</span>
+        <span class="modal-ability-value">當責力 +10</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stage-modal" id="badge-teamwork-modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" data-modal-close="badge-teamwork-modal">關閉</button>
+      <p class="modal-stage-name">關卡三｜大樹下的故事＋職系交流</p>
+      <h3>大樹勳章：了解企業文化、員工福利及前輩經驗</h3>
+      <img class="modal-hero-img" src="assets/Cathay.png" alt="草叢冒險" />
+      <p class="modal-desc">
+        工福利及前輩經驗了解公司的願景與價值，同時透過與資深學長姐交流，分享他們在不同職務上的工作經驗及心路歷程，讓我們對未來職涯方向有更清楚的認識與期待。
+      </p>
+      <div class="modal-ability">
+        <span class="modal-ability-label">通過關卡獲得能力值</span>
+        <span class="modal-ability-value">合作力 +10</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stage-modal" id="badge-adventure-modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" data-modal-close="badge-adventure-modal">關閉</button>
+      <p class="modal-stage-name">關卡四｜國泰歌與站上頂端</p>
+      <h3>愛的勳章：唱吧!國泰歌，跳吧!站上頂端</h3>
+      <img class="modal-hero-img" src="assets/class04/Gold8.png" alt="大樹下" />
+      <p class="modal-desc">
+        在歡樂的氛圍中凝聚團隊向心力，也象徵攜手朝共同目標邁進，展現企業文化與團隊精神。
+      </p>
+      <div class="modal-ability">
+        <span class="modal-ability-label">通過關卡獲得能力值</span>
+        <span class="modal-ability-value">冒險力 +10</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stage-modal" id="rocket-modal" aria-hidden="true">
+    <div class="modal-panel modal-panel-wide">
+      <button class="modal-close" data-modal-close="rocket-modal">關閉</button>
+      <h3>火箭部隊突襲紀錄</h3>
+      <p class="modal-desc">以日記的方式，記錄下這次闖關任務中的每個精彩瞬間。</p>
+
+      <div class="diary-list">
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class01/LINE_ALBUM_2026720_260722_1.jpg" alt="活動照片 1" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 1</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class01/LINE_ALBUM_2026720_260722_2.jpg" alt="活動照片 2" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 2</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class01/LINE_ALBUM_2026720_260722_3.jpg" alt="活動照片 3" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 3</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class01/LINE_ALBUM_2026720_260722_4.jpg" alt="活動照片 4" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 4</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class01/LINE_ALBUM_敏捷-勳章_260722_1.jpg" alt="活動照片 5" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 5</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class01/LINE_ALBUM_敏捷-勳章_260722_2.jpg" alt="活動照片 6" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 6</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class01/LINE_ALBUM_敏捷-紀錄_260722_1.jpg" alt="活動照片 7" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 7</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stage-modal" id="boss-modal" aria-hidden="true">
+    <div class="modal-panel modal-panel-wide">
+      <button class="modal-close" data-modal-close="boss-modal">關閉</button>
+      <h3>板木老大挑戰紀錄</h3>
+      <p class="modal-desc">以日記的方式，記錄下這次挑戰任務中的每個精彩瞬間。</p>
+
+      <div class="diary-list">
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class02/LINE_ALBUM_當責-勳章_260722_1.jpg" alt="活動照片 1" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 1</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class02/LINE_ALBUM_當責-勳章_260722_2.jpg" alt="活動照片 2" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 2</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stage-modal" id="grass-modal" aria-hidden="true">
+    <div class="modal-panel modal-panel-wide">
+      <button class="modal-close" data-modal-close="grass-modal">關閉</button>
+      <h3>草叢冒險紀錄</h3>
+      <p class="modal-desc">以日記的方式，記錄下這次探索任務中的每個精彩瞬間。</p>
+
+      <div class="diary-list">
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class03/LINE_ALBUM_當責-紀錄_260722_1.jpg" alt="活動照片 1" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 1</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class03/LINE_ALBUM_當責-紀錄_260722_2.jpg" alt="活動照片 2" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 2</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class03/LINE_ALBUM_當責-紀錄_260722_3.jpg" alt="活動照片 3" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 3</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stage-modal" id="song-modal" aria-hidden="true">
+    <div class="modal-panel modal-panel-wide">
+      <button class="modal-close" data-modal-close="song-modal">關閉</button>
+      <h3>胖丁的歌聲紀錄</h3>
+      <p class="modal-desc">以日記的方式，記錄下這趟旅程回顧中的每個精彩瞬間。</p>
+
+      <div class="diary-list">
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class04/LINE_ALBUM_2026722_260722_1.jpg" alt="活動照片 1" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 1</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class04/LINE_ALBUM_2026722_260722_2.jpg" alt="活動照片 2" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 2</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+
+        <div class="diary-entry">
+          <img class="diary-photo" src="assets/class04/LINE_ALBUM_2026722_260722_3.jpg" alt="活動照片 3" />
+          <div class="diary-entry-body">
+            <label class="modal-field-label">紀錄 3</label>
+            <p class="diary-text">先暫時放置文字內容喔</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTop" class="back-to-top" onclick="scrollToSection('stages')" aria-label="回到冒險地圖">
+    <img src="assets/pokeball-top.png" alt="" />
+    <span>TOP</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
