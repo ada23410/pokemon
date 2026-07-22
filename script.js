@@ -98,3 +98,34 @@ if (backToTopBtn && stagesSection) {
   window.addEventListener("resize", updateBackToTop);
   updateBackToTop();
 }
+
+// 關卡紀錄燈箱：點擊左側縮圖切換右側大圖／影片
+document.querySelectorAll(".lightbox").forEach(function(lightbox) {
+  const thumbs = lightbox.querySelectorAll(".lightbox-thumb");
+  const mainImg = lightbox.querySelector(".lightbox-main-img");
+  const mainVideo = lightbox.querySelector(".lightbox-main-video");
+
+  thumbs.forEach(function(thumb) {
+    thumb.addEventListener("click", function() {
+      thumbs.forEach(function(t) {
+        t.classList.remove("active");
+      });
+      thumb.classList.add("active");
+
+      const fullSrc = thumb.dataset.full;
+
+      if (thumb.dataset.type === "video") {
+        mainImg.style.display = "none";
+        mainVideo.style.display = "block";
+        mainVideo.src = fullSrc;
+        mainVideo.play();
+      } else {
+        mainVideo.pause();
+        mainVideo.style.display = "none";
+        mainVideo.src = "";
+        mainImg.style.display = "block";
+        mainImg.src = fullSrc;
+      }
+    });
+  });
+});
